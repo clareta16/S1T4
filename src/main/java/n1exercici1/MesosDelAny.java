@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MesosDelAny {
-	private List<String> mesos;
+	private final List<String> mesos;
 
 	public MesosDelAny() {
 		mesos = new ArrayList<>();
@@ -22,12 +22,10 @@ public class MesosDelAny {
 		mesos.add("desembre");
 	}
 
-	public String getMesos() {
-		String missatge = "";
-		for (int i = 0; i < mesos.size(); i++) {
-			missatge = mesos.get(i);
-		}
-        return missatge;
-    }
+	public List<String> rebreMesos() {
+		return mesos;
+	}
+
+
 
 }
